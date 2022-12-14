@@ -1,6 +1,6 @@
 
 // Kommentiere hier (b)
-// circle1 und circle2 wird eine id gegeben für das svg Feld bestummen.
+// 
 const circle1 = document.querySelector("#circ1")
 const circle2 = document.querySelector("#circ2")
 
@@ -24,30 +24,42 @@ function start() {
 
 function animationLoop() {
     
-    // cx1 und cx2 bekommen den Attribut von cx (c)    
+    // Kommentiere hier (c)    
     // 
     let cx1 = parseFloat(circle1.getAttribute("cx"))     
     let cx2 = parseFloat(circle2.getAttribute("cx"))     
 
     // Start Loop
-    if (false) { // Aufgabe (4b)
+    if (cx1 > cx2+ 10) { // Aufgabe (4b)
         ({v1, v2} = newVelocity(v1, v2))
     }
 
+if (cx1=cx2){
+    count = count+1
+}
+
+
+if (cx2 < 0){
+    v2 = v2 *(-1)
+    count = count +1
+}
+
+
     // Kommentiere hier (d)
-    // cx1 und cx2 werden mit v1/v2 addiert und wiederholt
-    cx1 = cx1 + v1 / repetitions
-    cx2 = cx2 + v2 / repetitions
+    // 
+    cx1 = cx1 + v1 / 10000
+    cx2 = cx2 + v2 / 10000
+
 
     // End Loop
     
-    // cx1 und cx2 werden wieder auf ihren ursprünglichen Wert gesetzt, der weiter oben geändert wurde (e)
+    // Kommentiere hier (e)
     circle1.setAttribute("cx", cx1)
     circle2.setAttribute("cx", cx2)
 
-    // wenn das runnging "true" ist, wird die dazugehörende Animation durchgeführt(f)
+    // Kommentiere hier (f)
     // 
-    if ( cx2 <= 95 ) {
+    if ( running === true ) {
         window.requestAnimationFrame(animationLoop)
     }
 }
@@ -61,10 +73,5 @@ function newVelocity(v1, v2) {
 }
 
 function displayNumber() {
-    return (count / 10**digits).toFixed(digits)
+    return (count / 10**5).toFixed(digits)
 }
-
-function start() {
-   running = false
-}
-
