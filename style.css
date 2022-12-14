@@ -1,11 +1,15 @@
 body {
     padding: 0;
     margin: 0;
-    background-color: bisque;
+    background-color: lemonchiffon;
 }
 
 h1 {
     text-align: center;
+  
+    font-size: 2.1rem;
+    font-family: monospace;
+
 }
 
 .container {
@@ -22,9 +26,15 @@ h1 {
 
 .btn-container {
     text-align: center;
+    margin: 20px;
 }
 
 .btn-container button {
     min-width: 150px;
     min-height: 50px;
+    
+    background-color: darkolivegreen;
+    font-weight: bold;
+    color: blanchedalmond;
+
 }
