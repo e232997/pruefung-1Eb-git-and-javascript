@@ -1,6 +1,6 @@
 
 // Kommentiere hier (b)
-// 
+// circle1 und circle2 wird eine id gegeben für das svg Feld bestummen.
 const circle1 = document.querySelector("#circ1")
 const circle2 = document.querySelector("#circ2")
 
@@ -24,7 +24,7 @@ function start() {
 
 function animationLoop() {
     
-    // Kommentiere hier (c)    
+    // cx1 und cx2 bekommen den Attribut von cx (c)    
     // 
     let cx1 = parseFloat(circle1.getAttribute("cx"))     
     let cx2 = parseFloat(circle2.getAttribute("cx"))     
@@ -35,17 +35,17 @@ function animationLoop() {
     }
 
     // Kommentiere hier (d)
-    // 
+    // cx1 und cx2 werden mit v1/v2 addiert und wiederholt
     cx1 = cx1 + v1 / repetitions
     cx2 = cx2 + v2 / repetitions
 
     // End Loop
     
-    // Kommentiere hier (e)
+    // cx1 und cx2 werden wieder auf ihren ursprünglichen Wert gesetzt, der weiter oben geändert wurde (e)
     circle1.setAttribute("cx", cx1)
     circle2.setAttribute("cx", cx2)
 
-    // Kommentiere hier (f)
+    // wenn das runnging "true" ist, wird die dazugehörende Animation durchgeführt(f)
     // 
     if ( running === true ) {
         window.requestAnimationFrame(animationLoop)
