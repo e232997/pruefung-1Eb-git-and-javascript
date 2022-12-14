@@ -47,8 +47,9 @@ if (cx2 < 0){
 
     // Kommentiere hier (d)
     // 
-    cx1 = cx1 + v1 / repetitions
-    cx2 = cx2 + v2 / repetitions
+    cx1 = cx1 + v1 / 10000
+    cx2 = cx2 + v2 / 10000
+
 
     // End Loop
     
@@ -72,5 +73,5 @@ function newVelocity(v1, v2) {
 }
 
 function displayNumber() {
-    return (count / 10**digits).toFixed(digits)
+    return (count / 10**5).toFixed(digits)
 }
