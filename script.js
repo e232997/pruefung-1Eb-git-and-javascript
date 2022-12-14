@@ -47,7 +47,7 @@ function animationLoop() {
 
     // wenn das runnging "true" ist, wird die dazugehörende Animation durchgeführt(f)
     // 
-    if ( running === true ) {
+    if ( cx2 <= 95 ) {
         window.requestAnimationFrame(animationLoop)
     }
 }
@@ -63,3 +63,8 @@ function newVelocity(v1, v2) {
 function displayNumber() {
     return (count / 10**digits).toFixed(digits)
 }
+
+function start() {
+   running = false
+}
+
