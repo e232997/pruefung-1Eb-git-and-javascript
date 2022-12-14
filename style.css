@@ -30,6 +30,6 @@ h1 {
 .btn-container button {
     min-width: 150px;
     min-height: 50px;
-    color: burlywood;
+    color: rgb(41, 37, 31);
     background-color: darkolivegreen;
 }
