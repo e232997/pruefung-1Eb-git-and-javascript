@@ -65,5 +65,5 @@ function displayNumber() {
 }
 
 function start() {
-   
+   running = false
 }
