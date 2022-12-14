@@ -47,7 +47,7 @@ function animationLoop() {
 
     // wenn das runnging "true" ist, wird die dazugehörende Animation durchgeführt(f)
     // 
-    if ( running === true ) {
+    if ( cx2 <= 95 ) {
         window.requestAnimationFrame(animationLoop)
     }
 }
@@ -67,3 +67,4 @@ function displayNumber() {
 function start() {
    running = false
 }
+
